@@ -25,11 +25,6 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = '__all__'
 
-class TotalPostsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = '__all__'
-
 class SpecificCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
