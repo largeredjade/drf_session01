@@ -13,8 +13,8 @@ from .serializers import *
 
 class GetAPIView(APIView):
     def get(self, request):
-        posts = Post.objects.all()
-        serializer = PostSerializer(posts, many=True)
+        post = Post.objects.all()
+        serializer = PostSerializer(post, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
